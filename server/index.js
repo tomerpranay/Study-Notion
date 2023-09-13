@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
-
-const dbconnect = require("./config/database")
 const cookieParser = require("cookie-parser");
+const dbconnect = require("./config/database")
+
 const cors = require('cors')
 const { cloudinaryconnect } = require("./config/cloudinary")
 const fileUpload = require("express-fileupload")
