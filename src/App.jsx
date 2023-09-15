@@ -12,6 +12,7 @@ import Settings from "./components/core/Dashboard/Settings";
 import Catalog from "./pages/Catalog";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/core/Auth/PrivateRoute";
+import Contact from "./pages/Contact";
 import { useDispatch, useSelector } from "react-redux";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
 import AddCourse from "./components/core/Dashboard/AddCourse";
@@ -48,6 +49,7 @@ function App() {
             </OpenRoute>
           }
         />
+        <Route path="/contact" element={<Contact />} />
          <Route
           path="/about"
           element={
