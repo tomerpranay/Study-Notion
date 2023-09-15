@@ -71,14 +71,14 @@ const Home = () => {
                     <Codeblocks
                         position={"lg:flex-row-reverse"} heading={
                             <div className="text-4xl font-semibold">
-                                Unlock your
+                                Start
                                 <HighlightText text={"coding potential"} /> with our online
                                 courses.
                             </div>
                         } subheading={
-                            "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+                            "Go ahead, give it a try. Our hands-on learning environment means you'll be writing real code from your very first lesson."
                         } ctabtn1={{
-                            btnText: "Try it Yourself",
+                            btnText: "Continue Lesson",
                             act: true,
                             link: "/signup",
                         }
@@ -87,7 +87,7 @@ const Home = () => {
                             act: false,
                             link: "/signup",
                         }
-                        } codeColor={"text-yellow-25"} codeblock={`<!DOCTYPE html>\n <html lang="en">\n<head>\n<title>This is myPage</title>\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav> <a href="/one">One</a> <a href="/two">Two</a> <a href="/three">Three</a>\n</nav>\n</body>`} backgroundGradient={<div className="codeblock1 absolute"></div>} />
+                        } codeColor={"text-yellow-25"} codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`} backgroundGradient={<div className="codeblock1 absolute"></div>} />
                          
                 </div>
                 <ExploreMore />
