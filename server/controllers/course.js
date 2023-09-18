@@ -10,7 +10,7 @@ const { uploadimage } = require("../utils/imageuploader")
 
 exports.createcourse = async (req, res) => {
     try {
-        const { coursename, coursedesp, status: status,tag, whatyouwilllearn,coursecontent, price, category, instructions } = req.body
+        const { coursename, coursedesp, status:status,tag, whatyouwilllearn,coursecontent, price, category, instructions } = req.body
         const thumbnail = req.files.thumbnail
         if (!coursename || !coursedesp || !whatyouwilllearn || !price || !category) {
             return res.status(403).json({
@@ -31,8 +31,7 @@ exports.createcourse = async (req, res) => {
                 message: "intructor details not found"
             })
         }
-
-        const tagdetails = await Tag.findById(category)
+        const tagdetails = await Category.findById(category)
         if (!tagdetails) {
             return res.status(404).json({
                 success: false,
@@ -45,7 +44,7 @@ exports.createcourse = async (req, res) => {
         const newcourse = await Course.create({
             coursename: coursename,
             coursedesp: coursedesp,
-            catagory: tagdetails._id,
+            category:category,
             price: price,
             whatyouwilllearn: whatyouwilllearn,
             instructor: intructoredetails._id,

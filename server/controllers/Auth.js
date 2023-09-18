@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const course=require("../models/course")
 const OTP = require("../models/otp");
 const otpGenerator = require("otp-generator");
 const bcrypt = require("bcrypt");
@@ -150,6 +151,7 @@ exports.login = async (req, res) => {
                 message: "enter all fields"
             });
         }
+        
         const user = await User.findOne({ email:email })
         if (!user) {
             console.log("User doesnt exist please singup");
