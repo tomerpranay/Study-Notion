@@ -44,7 +44,7 @@ exports.createcourse = async (req, res) => {
         const newcourse = await Course.create({
             coursename: coursename,
             coursedesp: coursedesp,
-            category:category,
+            category:tagdetails._id,
             price: price,
             whatyouwilllearn: whatyouwilllearn,
             instructor: intructoredetails._id,
