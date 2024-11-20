@@ -18,7 +18,7 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import AddCourse from "./components/core/Dashboard/AddCourse";
 import EditCourse from "./components/core/Dashboard/EditCourse";
 import Navbar from "./components/common/Navbar"
-import EnrolledCourses from "./components/core/Dashboard/EditCourse/index.js";
+import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 import Cart from "./components/core/Dashboard/Cart";
 import UpdatePassword from "./pages/UpdatePassword";
 import CourseDetails from "./pages/CourseDetails";
@@ -138,6 +138,7 @@ function App() {
         />  
         <Route path="*" element={<Error />} />
       </Routes>
+      
     </div>
   );
 }
