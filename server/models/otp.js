@@ -18,7 +18,7 @@ const otp = new mongoose.Schema({
 })
 async function sendemail(email,otp) {
     try {
-        const mailsender=await mailSender(email,"verification email from StudyNotion",otp)
+        const mailsender=await mailSender(email,"verification email from EduVantage",otp)
         console.log("email send succefully");
      
         
